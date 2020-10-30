@@ -17,7 +17,7 @@ public class LogAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* com.leet.web.*.*(..))")
+    @Pointcut("execution(* top.lavau.*.*(..))")
     public void log() {}
 
 
