@@ -1,0 +1,13 @@
+spring:
+  thymeleaf:
+    mode: HTML
+    cache: false
+    servlet:
+      content-type: text/html
+  profiles:
+    active: dev
+  messages:
+    basename: i18n/messages
+
+comment.avatar: /images/avatar.png
+
