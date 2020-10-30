@@ -28,7 +28,6 @@ public class BlogController {
     private static final String LIST = "admin/blogs";
     private static final String REDIRECT_LIST = "redirect:/admin/blogs";
 
-
     @Autowired
     private BlogService blogService;
     @Autowired
