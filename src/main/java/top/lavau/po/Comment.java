@@ -1,7 +1,6 @@
 package top.lavau.po;
 
 import lombok.Data;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -9,7 +8,6 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@ToString
 @Entity
 @Table(name = "t_comment")
 public class Comment {

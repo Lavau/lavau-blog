@@ -1,5 +1,6 @@
 package top.lavau.service;
 
+import lombok.extern.slf4j.Slf4j;
 import top.lavau.NotFoundException;
 import top.lavau.dao.BlogRepository;
 import top.lavau.po.Blog;
@@ -21,6 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.criteria.*;
 import java.util.*;
 
+@Slf4j
 @Service
 public class BlogServiceImpl implements BlogService {
 
@@ -31,6 +33,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog getBlog(Long id) {
         Optional<Blog> optional = blogRepository.findById(id);
+        log.info("blog: {}", optional.get().toString());
         return optional.get();
     }
 

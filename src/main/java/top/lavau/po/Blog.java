@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@ToString
 @Entity
 @Table(name = "t_blog")
 public class Blog {
@@ -63,5 +62,12 @@ public class Blog {
         } else {
             return tagIds;
         }
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Blog{");
+        sb.append('}');
+        return sb.toString();
     }
 }

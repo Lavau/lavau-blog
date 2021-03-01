@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@ToString
 @Entity
 @Table(name = "t_type")
 public class Type {
@@ -20,4 +19,11 @@ public class Type {
     private String name;
     @OneToMany(mappedBy = "type")
     private List<Blog> blogs = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Type{");
+        sb.append('}');
+        return sb.toString();
+    }
 }
