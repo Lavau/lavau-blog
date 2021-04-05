@@ -1,22 +1,36 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.98.217.61:3306/blog?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8
     username: root
-    password: root
+    password: wuchenyu
+  #    url: jdbc:mysql://127.0.0.1:3306/blog?serverTimezone=Hongkong&useSSL=false
+  #    username: root
+  #    password: 123456
   jpa:
-    hibernate:
-      ddl-auto: none
-    show-sql: true
+    open-in-view: true
+    generate-ddl: true
+  mvc:
+    favicon:
+      enabled: false
+
+jpa:
+  hibernate:
+    # ddl-auto 根据实体类和表结构的变化进行不同的操作
+    ddl-auto: update
+  # 将执行的 sql 语句打印在控制台和日志中
+  show-sql: true
 
 logging:
   level:
-    root: warn
-    com.lrm: info
-  file: log/blog-pro.log
+    root: info
+    com.lrm: debug
+  file:
+    # 设置日志文件所在位置
+    path: /log/blog-dev.log
 
+web:
+  upload-path: /hd/img/
 
-
-
-
-
+server:
+  port: 8089
